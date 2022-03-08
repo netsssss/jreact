@@ -1,5 +1,5 @@
 import { useAuth } from 'context/auth-context'
-import React, { FormEvent, useState } from 'react'
+import { FormEvent } from 'react'
 
 export const RegisterScreen = () => {
     const { register } = useAuth()
