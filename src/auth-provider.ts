@@ -17,6 +17,8 @@ export const login = (data: { username: string; password: string }) => {
         },
         body: JSON.stringify(data)
     }).then(async (res: Response) => {
-        return handleUserResponse(await res.json())
+        if (res.ok) {
+            return handleUserResponse(await res.json())
+        }
     })
 }
